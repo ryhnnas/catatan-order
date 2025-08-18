@@ -1,0 +1,133 @@
+/* --- Import Font dari Google --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* --- Style Dasar & Reset --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Font baru yang lebih modern */
+    background-color: #f0f2f5; /* Warna latar belakang abu-abu lembut */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- Container Utama --- */
+.container {
+    width: 100%;
+    max-width: 600px; /* Lebar maksimal di layar besar, akan full di HP */
+    margin: 20px auto; /* Posisi di tengah dengan jarak atas/bawah */
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Atur Posisi Daftar Makanan --- */
+.container ul {
+    list-style-position: inside; /* Pindahkan bullet/nomor ke dalam */
+    padding-left: 10px;          /* Beri sedikit jarak dari kiri */
+}
+
+/* --- Judul Halaman --- */
+h1 {
+    font-size: 1.8em; /* Ukuran tulisan judul */
+    color: #1c1e21;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #f0f2f5;
+    padding-bottom: 5px;
+}
+
+/* --- Daftar Supplier (Halaman Utama) --- */
+.supplier-list {
+    list-style: none; /* Hilangkan titik-titik daftar */
+}
+
+.supplier-list li a {
+    display: block;
+    background-color: #e7f3ff; /* Warna biru muda */
+    color: #0056b3; /* Warna biru tua */
+    padding: 18px 15px; /* Padding besar agar mudah disentuh */
+    margin-bottom: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Efek saat disentuh/hover */
+.supplier-list li a:hover {
+    background-color: #d1e7ff;
+}
+.supplier-list li a:active {
+    transform: scale(0.98); /* Efek "ditekan" */
+}
+
+/* --- Halaman Detail & Form Order --- */
+.back-link {
+    display: inline-block;
+    color: #0056b3;
+    text-decoration: none;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.order-form {
+    margin-top: 30px;
+}
+
+textarea#pesanOrder {
+    width: 100%;
+    padding: 12px;
+    font-family: 'Poppins', sans-serif; /* Samakan font-nya */
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: vertical; /* Agar bisa diubah tingginya saja */
+    min-height: 120px;
+    margin-bottom: 15px;
+}
+textarea#pesanOrder:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 0 2px rgba(0, 86, 179, 0.2);
+}
+
+button#kirimWa {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: linear-gradient(45deg, #25D366, #128C7E); /* Gradient warna WhatsApp */
+    color: white;
+    font-size: 1.1em;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button#kirimWa:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+button#kirimWa:active {
+    transform: scale(0.98); /* Efek "ditekan" */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
